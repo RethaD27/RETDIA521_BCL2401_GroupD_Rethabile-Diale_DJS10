@@ -8,8 +8,9 @@ This React application fetches and displays a list of posts from an external API
 
 ## Technologies Used
 * React
-* JavaScript (ES6+)
-* HTML/CSS
+* JavaScript 
+* HTML
+* CSS
 
 ## Key Files
 * src/App.js: The main component that fetches and displays posts.
