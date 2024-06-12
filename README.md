@@ -24,7 +24,7 @@ The App component is the core of this application. It handles the fetching of da
 * error: A string to store any error messages encountered during data fetching.
 
 ## Side Effects
-*The useEffect hook is used to perform the side effect of fetching data when the component mounts.
+* The useEffect hook is used to perform the side effect of fetching data when the component mounts.
 
 ## Rendering
 * If there is an error, it is displayed in a styled div.
