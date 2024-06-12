@@ -8,7 +8,7 @@ const App = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          "https://jsoplaceholder.typicode.com/posts"
+          "https://jsonplaceholder.typicode.com/posts"
         );
         if (!response.ok) {
           throw new Error("Data fetching failed");
