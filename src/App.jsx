@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./App.css";
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -8,7 +9,7 @@ const App = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          "https://jsonplaceholder.typicode.com/posts"
+          "https://sonplaceholder.typicode.com/posts"
         );
         if (!response.ok) {
           throw new Error("Data fetching failed");
@@ -16,7 +17,7 @@ const App = () => {
         const data = await response.json();
         setPosts(data);
       } catch (error) {
-        setError(error.message);
+        setError("Data fetching failed");
       }
     };
 
@@ -24,10 +25,21 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <h1>Posts</h1>
+    <div
+      className="App"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <h1 style={{ textAlign: "center" }}>Posts</h1>
       {error ? (
-        <div style={{ color: "black" }}>Error: {error}</div>
+        <div style={{ textAlign: "center", color: "black" }}>
+          <strong>{error}</strong>
+        </div>
       ) : (
         <ul style={{ listStyleType: "none", padding: 0 }}>
           {posts.map((post, index) => (
